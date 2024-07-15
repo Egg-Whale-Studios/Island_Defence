@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b8e3b4b3b95b449b6f60a1a8486d23, type: 3}
+  m_Name: Short Sword
+  m_EditorClassIdentifier: 
+  description: Attack themm!!!
+  name: Sword
+  icon: {fileID: 21300000, guid: a9e059ad469147e439f806c5411ad3dc, type: 3}
+  prefab: {fileID: 3111599475211274378, guid: 8f2134b855a922245816b8027eb6f2e2, type: 3}
+  type: Weapon
+  tier: 1
+  dual: 0
+  handle_position: {x: 0, y: 0.6, z: 0}
+  Walking: {fileID: 0}
+  Attacking: {fileID: 0}
+  animation_bool: attacking
+  damage: 5
+  attack_speed: 0
+  cooldown: 0

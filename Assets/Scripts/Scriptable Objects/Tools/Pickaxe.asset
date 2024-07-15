@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4b2cae01dd85c041ad75436a79fbd76, type: 3}
+  m_Name: Pickaxe
+  m_EditorClassIdentifier: 
+  description: Break some stones!!
+  name: Pickaxe
+  icon: {fileID: 21300000, guid: a2aac163e710db84a8f97edc67f3c3a7, type: 3}
+  prefab: {fileID: 3741055286932439113, guid: 8b4948462f132904d9f4e17139420b4b, type: 3}
+  type: Tool
+  tier: 1
+  target: Rock
+  animation_bool: mining
+  rotation_speed: 5
+  rotation_angle: 5
+  radius: 3
+  damage: 3
+  handle_position: {x: 0, y: 2, z: 0}
+  upgrade_cost: []

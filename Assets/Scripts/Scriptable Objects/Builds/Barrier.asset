@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588542b0525b3424cb0588371f1579be, type: 3}
+  m_Name: Barrier
+  m_EditorClassIdentifier: 
+  description: Stay away please
+  name: Barrier
+  icon: {fileID: 21300000, guid: 6edf41823da4f074aa5bd207ba6ac215, type: 3}
+  prefab: {fileID: 6546312604391709742, guid: 053d5d9aa1104bd41a75645325b91e4e, type: 3}
+  type: Build
+  stackable: 0
+  tier: 
+  Item_Names: []
+  Item_Values: 
+  crafting_cost:
+  - item: {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
+    amount: 2
+  upgrading_cost: []
