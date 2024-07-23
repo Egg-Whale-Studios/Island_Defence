@@ -7,27 +7,32 @@ public class Health_Bar : MonoBehaviour
 {
     [Header("Stats")]
     
-    public GameObject player;
+    private GameObject player;
     private Player_Stats player_script;
-    public GameObject foreground;
+    private GameObject foreground;
     private Image img;
-    private CanvasGroup bar;
-    private bool is_faded;
+    private bool spawned;
     
     
-    void Start()
+    
+    IEnumerator Start()
     {
+        yield return new WaitForSeconds(5f);
+        spawned = true;
+        player = GameObject.FindWithTag("Player");
         player_script = player.GetComponent<Player_Stats>();
+        foreground = transform.GetChild(0).gameObject;
         img = foreground.GetComponent<Image>();
-        bar = GetComponent<CanvasGroup>();
     }
 
     
     void Update()
     {
         
-        
-        img.fillAmount = player_script.current_health / player_script.max_health;
+        if (spawned)
+        {
+            img.fillAmount = player_script.current_health / player_script.max_health;
+        }
         
         
     }

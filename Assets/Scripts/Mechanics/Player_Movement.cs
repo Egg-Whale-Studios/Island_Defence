@@ -29,8 +29,10 @@ public class Player_Movement : MonoBehaviour
     private Vector3 moveDirection;
     private bool is_dodging;
     private Player_Stats stats;
-
+    private Player_Crafting crafting_script;
     private Animator animator;
+    private bool dodge_turn_timer;
+    private bool against_something;
     
     
     void Start()
@@ -38,26 +40,39 @@ public class Player_Movement : MonoBehaviour
         body = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         stats = GetComponent<Player_Stats>();
+        crafting_script = GetComponent<Player_Crafting>();
         run_speed = walk_speed * 1.5f;
+        StartCoroutine(stats.Spawn());
     }
     
     void Update()
     {
-        if (!is_dodging)
+        if (!stats.cut_movement && !crafting_script.crafting_open)
         {
-            run_check();
-            direction_check();
+            Check_For_Walls();
+            if (!is_dodging)
+            {
+                run_check();
+                direction_check();
+            }
+            
+            if (!against_something) move();
+
+            if (Input.GetKeyDown(dodge_key) && !is_dodging)
+            {
+                dodge_turn_timer = true;
+                
+                StartCoroutine(dodge());
+            }
+
+            if (dodge_turn_timer)
+            {
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDirection),0.05f);
+            }
         }
-        
-        move();
-        
-        if (Input.GetKeyDown(dodge_key) && !is_dodging)
-        {
-            StartCoroutine(dodge());
-        }
-        
     }
     
+
 
     #region Movement
     private void run_check()
@@ -90,7 +105,7 @@ public class Player_Movement : MonoBehaviour
         else
         {
             animator.SetBool("is_moving", false);
-            body.velocity = new Vector3(0, body.velocity.y, 0);
+            //body.velocity = new Vector3(0, body.velocity.y, 0);
         }
     }
 
@@ -115,9 +130,8 @@ public class Player_Movement : MonoBehaviour
             moveDirection += Vector3.left;
         }
         
-        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hitInfo))
+        if (Physics.Raycast(ray, out RaycastHit hitInfo, 300f, LayerMask.GetMask("Ground")))
         {
             Vector3 targetPosition = hitInfo.point;
             targetPosition.y = transform.position.y; 
@@ -128,11 +142,25 @@ public class Player_Movement : MonoBehaviour
             Quaternion target = Quaternion.LookRotation(directionToMouse);
             transform.localRotation = Quaternion.Slerp(current, target, 10 * Time.deltaTime);
         }
+        
     }
 
-    
 
-    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position + moveDirection.normalized * 1 + new Vector3(0,3,0), 0.5f);
+    }
+
+    private void Check_For_Walls()
+    {
+        
+        against_something = Physics.CheckSphere(transform.position + moveDirection.normalized * 1 + new Vector3(0,3,0), 0.5f, ~(1 << LayerMask.NameToLayer("Ground") | 1 << LayerMask.NameToLayer("Player")));
+        if (against_something)
+        {
+            animator.SetBool("is_moving", false);
+        }
+    }
     
     #endregion
     
@@ -140,6 +168,7 @@ public class Player_Movement : MonoBehaviour
 
     private IEnumerator dodge()
     {
+        
         is_dodging = true;
         animator.SetTrigger("dodge");
         yield return new WaitForSeconds(0.2f);
@@ -150,8 +179,11 @@ public class Player_Movement : MonoBehaviour
         speed = 25;
         yield return new WaitForSeconds(0.5f);
         is_dodging = false;
-        
-        
+        dodge_turn_timer = false;
+
     }
+    
+    
+    
     
 }

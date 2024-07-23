@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3471821543735896415}
   - component: {fileID: -2265958801417604187}
   - component: {fileID: -7466325626495015876}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ShortSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3111599475211274378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.88, y: 3.34, z: -3.24}
+  m_LocalPosition: {x: 16.513927, y: 1.44, z: -29.940014}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -116,12 +116,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4, y: 3.6329944, z: 1.2093866}
-  m_Center: {x: 0, y: 0.8628398, z: 0}
+  m_Size: {x: 0.4, y: 4.1175895, z: 1.54879}
+  m_Center: {x: 0, y: 1.1051376, z: 0.013055801}
 --- !u!1 &5841223469376100717
 GameObject:
   m_ObjectHideFlags: 0

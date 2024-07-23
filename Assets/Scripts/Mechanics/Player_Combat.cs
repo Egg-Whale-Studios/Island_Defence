@@ -17,7 +17,6 @@ public class Player_Combat : MonoBehaviour
     private GameObject temp_weapon1;
     private GameObject temp_weapon2;
     private bool is_dual;
-    private string target;
     
     [Header("Required Thingies")]
     
@@ -30,6 +29,8 @@ public class Player_Combat : MonoBehaviour
     private string weapon_animation;
     private Weapon_Behaviour weapon_behaviour1;
     private Weapon_Behaviour weapon_behaviour2;
+    private string target;
+    
     
     
     
@@ -70,10 +71,8 @@ public class Player_Combat : MonoBehaviour
             temp_weapon2.transform.SetParent(left_hand.transform);
             weapon_behaviour1 = temp_weapon1.GetComponent<Weapon_Behaviour>();
             weapon_behaviour2 = temp_weapon1.GetComponent<Weapon_Behaviour>();
-            
             weapon_behaviour2.target = target;
         }
-
         weapon_behaviour1.target = target;
         
     }
@@ -96,6 +95,7 @@ public class Player_Combat : MonoBehaviour
     {
         
         weapon_prefab = new_prefab;
+        weapon_prefab.layer = LayerMask.NameToLayer("Player");
         cooldown = new_cooldown;
         is_dual = new_duality;
         handle_position = new_handle_position;

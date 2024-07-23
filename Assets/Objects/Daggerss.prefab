@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3471821543735896415}
   - component: {fileID: 8709869898933545986}
   - component: {fileID: -5881224752023271194}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Daggerss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 123e5f1aa35eae34183e2c09380e984a, type: 2}
-  weapon_collider: {fileID: -5881224752023271194}
 --- !u!65 &-5881224752023271194
 BoxCollider:
   m_ObjectHideFlags: 0

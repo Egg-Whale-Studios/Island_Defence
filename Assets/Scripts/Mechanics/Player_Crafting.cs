@@ -15,11 +15,12 @@ public class Player_Crafting : MonoBehaviour
     [Header("Required Thingies")] 
     public Crafting_Management management;
     private Player_Inventory player_inventory;
-    private bool crafting_open;
+    public bool crafting_open;
     public GameObject crafting_panel;
     void Start()
     {
         player_inventory = GetComponent<Player_Inventory>();
+        management = GameObject.FindWithTag("Canvas").GetComponentInChildren<Crafting_Management>();
     }
 
     

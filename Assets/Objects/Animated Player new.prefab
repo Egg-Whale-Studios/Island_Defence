@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9067839568298325338}
   - component: {fileID: 2809777348606229390}
   - component: {fileID: 6849297314671326400}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,14 +114,16 @@ GameObject:
   m_Component:
   - component: {fileID: 4088786258526928610}
   - component: {fileID: 8396929634263542385}
-  - component: {fileID: 4361059007023970451}
+  - component: {fileID: 4791936247339838141}
+  - component: {fileID: 3697855194981290712}
   - component: {fileID: 6159252684520050258}
   - component: {fileID: 7414602201645114308}
   - component: {fileID: 1035997694265825065}
-  - component: {fileID: 3697855194981290712}
   - component: {fileID: 2704471593767768786}
   - component: {fileID: 5989014350002651128}
-  m_Layer: 0
+  - component: {fileID: 6672982851096334010}
+  - component: {fileID: 1052191401666668141}
+  m_Layer: 10
   m_Name: Animated Player new
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -137,7 +139,7 @@ Transform:
   m_GameObject: {fileID: 280427766442834058}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.2, y: 0.65, z: -19.2}
+  m_LocalPosition: {x: 52.7, y: 5.5, z: 29.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -165,10 +167,10 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.7
-  m_Height: 1.4000001
+  m_Height: 4.1000843
   m_Direction: 1
-  m_Center: {x: 0, y: 2.058451, z: 0}
---- !u!54 &4361059007023970451
+  m_Center: {x: 0, y: 3.408493, z: 0}
+--- !u!54 &4791936247339838141
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,7 +178,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280427766442834058}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -192,9 +194,30 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!95 &3697855194981290712
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280427766442834058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b66c527d6d89024998baad952d8ed1a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &6159252684520050258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,34 +275,13 @@ MonoBehaviour:
   key3: 51
   key4: 52
   key5: 53
-  inventory_panel: {fileID: 0}
+  inventory_panel: {fileID: 841533161056798356, guid: f3e0e06cbde3c7a4dba02429d9346f73, type: 3}
   management: {fileID: 0}
   inventory: {fileID: 0}
   stone: {fileID: 11400000, guid: 04e326247e864374e978a45025ce2e0b, type: 2}
   wood: {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
   inventory_open: 0
   chosen_item: {fileID: 0}
---- !u!95 &3697855194981290712
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 280427766442834058}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b66c527d6d89024998baad952d8ed1a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &2704471593767768786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,7 +298,6 @@ MonoBehaviour:
   equipped_weapon: 0
   right_hand: {fileID: 1432510982814086578}
   left_hand: {fileID: 7823913987098778203}
-  is_attacking: 0
 --- !u!114 &5989014350002651128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +312,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   max_health: 100
   max_stamina: 300
+  is_knocbacked: 0
+--- !u!114 &6672982851096334010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280427766442834058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b900232d72e27274d9999d078bd1a3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  build_key: 323
+  rotate_clockwise: 113
+  rotate_anticlockwise: 101
+  build_prefab: {fileID: 0}
+  ghost_prefab: {fileID: 0}
+  temp_ghost: {fileID: 0}
+  equipped_build: 0
+--- !u!114 &1052191401666668141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280427766442834058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6bf3c9dfd8c9384eb751cfecb132591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craft_key: 323
+  craft_panel_key: 111
+  up: 273
+  down: 274
+  left: 276
+  right: 275
+  management: {fileID: 0}
+  crafting_open: 0
+  crafting_panel: {fileID: 0}
 --- !u!1 &659616015351446392
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +364,7 @@ GameObject:
   - component: {fileID: 1592903470970089184}
   - component: {fileID: 6834119479735807596}
   - component: {fileID: 712966145779603100}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sunglasses
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,7 +447,7 @@ GameObject:
   - component: {fileID: 4845744086745695553}
   - component: {fileID: 2322104121450941884}
   - component: {fileID: 421574086322696658}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +524,7 @@ GameObject:
   - component: {fileID: 162878534942908487}
   - component: {fileID: 1892128325020503421}
   - component: {fileID: 6760368026900150722}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Stamina canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,8 +637,7 @@ GameObject:
   - component: {fileID: 4029391992676275301}
   - component: {fileID: 2978048367948316811}
   - component: {fileID: 4237336192774182673}
-  - component: {fileID: 3194152981382761903}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: right hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,27 +709,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3194152981382761903
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1432510982814086578}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.49999997
-  m_Center: {x: 0, y: 0.00000047683716, z: 0}
 --- !u!1 &3691498012960235028
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,8 +720,7 @@ GameObject:
   - component: {fileID: 3405991336965341064}
   - component: {fileID: 2778764760265126827}
   - component: {fileID: 4192467096081434222}
-  - component: {fileID: 6772173917468581107}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -776,28 +795,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6772173917468581107
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3691498012960235028}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2959467708922500008, guid: dfc0c4cb365b959429378e2593ba0195, type: 3}
 --- !u!1 &6863773140919193384
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,8 +806,7 @@ GameObject:
   - component: {fileID: 8715104288306745832}
   - component: {fileID: 2503387262709708867}
   - component: {fileID: 6610528249091478629}
-  - component: {fileID: 7796345883568135203}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -883,27 +879,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7796345883568135203
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6863773140919193384}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7823913987098778203
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,8 +890,7 @@ GameObject:
   - component: {fileID: 253129189705419247}
   - component: {fileID: 7491652509094643108}
   - component: {fileID: 2344061139742802209}
-  - component: {fileID: 3752926811269451022}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: left hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -988,24 +962,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3752926811269451022
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7823913987098778203}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}

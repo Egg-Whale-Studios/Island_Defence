@@ -11,6 +11,9 @@ TagManager:
   - RockSpawner
   - SourceSpawner
   - Enemy
+  - Map Base
+  - Canvas
+  - Game Manager
   layers:
   - Default
   - TransparentFX
@@ -21,9 +24,9 @@ TagManager:
   - Ground
   - Source
   - Castle
-  - 
-  - 
-  - 
+  - Enemy
+  - Player
+  - Shield
   - 
   - 
   - 

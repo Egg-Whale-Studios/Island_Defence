@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEditor.Rendering;
 using UnityEngine;
 
@@ -114,6 +115,7 @@ public class Player_Tools : MonoBehaviour
     public void Change_Tool(string new_animation, GameObject new_prefab, Vector3 new_handle_position)
     {
         tool_prefab = new_prefab;
+        tool_prefab.layer = LayerMask.NameToLayer("Player");
         handle_position = new_handle_position;
         tool_animation = new_animation;
         

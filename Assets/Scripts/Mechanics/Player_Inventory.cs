@@ -25,8 +25,8 @@ public class Player_Inventory : MonoBehaviour
     
     
     [Header("Required Thingies")]
-    public GameObject inventory_panel;
-    public Inventory_Management management;
+    private GameObject inventory_panel;
+    private Inventory_Management management;
     public Inventory inventory;
     public Loots stone;
     public Loots wood;
@@ -36,20 +36,22 @@ public class Player_Inventory : MonoBehaviour
     private Player_Tools tools_script;
     private Player_Combat combat_script;
     private Player_Building building_script;
+
     
-    
+
     IEnumerator Start()
     {
         inventory = Inventory.Instance;
+        inventory_panel = GameObject.FindWithTag("Canvas").transform.GetChild(0).gameObject;
+        inventory_panel.SetActive(false);
+        management = inventory_panel.GetComponentInChildren<Inventory_Management>();
         tools_script = GetComponent<Player_Tools>();
         combat_script = GetComponent<Player_Combat>();
         building_script = GetComponent<Player_Building>();
         
         yield return new WaitUntil(() => Inventory.Instance != null); 
-        inventory_panel.SetActive(true);
-        inventory_panel.SetActive(false);
-        yield return new WaitForSeconds(0.1f);
         is_equipable();
+       
         
     }
     

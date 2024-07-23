@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour
     
     public List<Inventory_Items> keys;
     public List<int> values;
-    public Inventory_Management management;
+    private Inventory_Management management;
     public Inventory_Items[] starter_tools;
 
     private void Awake()
@@ -28,7 +28,11 @@ public class Inventory : MonoBehaviour
 
     IEnumerator Start()
     {
+        
+        management = GameObject.FindWithTag("Canvas").transform.GetChild(0).gameObject.GetComponentInChildren<Inventory_Management>();
+        
         yield return new WaitUntil(() => Instance != null);
+        
         foreach(Inventory_Items i in starter_tools)
         {
             Add_Item(i);
@@ -49,7 +53,6 @@ public class Inventory : MonoBehaviour
             keys.Add(item);
             values.Add(1);
         }
-        
         management.Inventory_Update();
         
     }

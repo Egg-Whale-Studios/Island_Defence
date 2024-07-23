@@ -41,7 +41,7 @@ public class Player_Building : MonoBehaviour
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit, 50, LayerMask.GetMask("Ground")) && Vector3.Distance(hit.point,transform.position) < 40)
+        if (Physics.Raycast(ray, out hit, 300, LayerMask.GetMask("Ground")) && Vector3.Distance(hit.point,transform.position) < 40)
         {
             Vector3 position = hit.point;
             position.y = 0.5f;
@@ -55,12 +55,12 @@ public class Player_Building : MonoBehaviour
                 temp_ghost.transform.position = position;
                 if (Input.GetKey(rotate_clockwise))
                 {
-                    temp_ghost.transform.Rotate(Vector3.up, -0.5f);
+                    temp_ghost.transform.Rotate(Vector3.up, -2f);
                 }
 
                 if (Input.GetKey(rotate_anticlockwise))
                 {
-                    temp_ghost.transform.Rotate(Vector3.up, 0.5f);
+                    temp_ghost.transform.Rotate(Vector3.up, 2f);
                 }
                 
                 if (Input.GetKeyDown(build_key) && build_behaviour.can_place)
@@ -95,6 +95,7 @@ public class Player_Building : MonoBehaviour
     public void change_build(GameObject new_prefab)
     {
         build_prefab = new_prefab;
+        build_prefab.layer = LayerMask.NameToLayer("Player");
         ghost_prefab = build_prefab;
         
     }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1326499539332800964}
   - component: {fileID: 8658495711896682911}
   - component: {fileID: -6441207833322600543}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -164,7 +164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c956aa34cf30a1a4baf458d71561868f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  original_materials: []
   positive_ghost: {fileID: 2100000, guid: 62421fd7590595a4d8362507230022a2, type: 2}
   negative_ghost: {fileID: 2100000, guid: 1b9093f625851014684d3a95602d9319, type: 2}
   is_ghost: 0

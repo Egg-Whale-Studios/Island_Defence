@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8746210035201541191
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7530049351297135771}
+  - component: {fileID: 5376146542626589411}
+  - component: {fileID: 938009157811030604}
+  - component: {fileID: 7109980789553796031}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Game Manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7530049351297135771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746210035201541191}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1547.5342, y: 481.96, z: 15.783177}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5376146542626589411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746210035201541191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a237f4f101eb9f447b1fc32727c83dfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: []
+  values: 
+  starter_tools:
+  - {fileID: 11400000, guid: b78caa4df4dcd6a41ace0e34461a538a, type: 2}
+  - {fileID: 11400000, guid: ea5ae7415c96bb44e95f3e6fbb6cfd69, type: 2}
+  - {fileID: 11400000, guid: 123e5f1aa35eae34183e2c09380e984a, type: 2}
+  - {fileID: 11400000, guid: 663c3927726af25458205d380d310719, type: 2}
+  - {fileID: 11400000, guid: b6ff216190a0fe543b3538373ee04ee3, type: 2}
+  - {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
+  - {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
+  - {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
+  - {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
+  - {fileID: 11400000, guid: 881ac4aa680329444b5f8b49df4955fd, type: 2}
+--- !u!114 &938009157811030604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746210035201541191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85799a30c9016dd4e83188a7b2a1a1f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  players:
+  - {fileID: 280427766442834058, guid: 5f41f38b82422d742aec9f587379ff6e, type: 3}
+  Corners:
+  - {fileID: 3647021441914815298, guid: 2956954d3643b3c4aae6e0281a56f098, type: 3}
+  - {fileID: 3500442743918951342, guid: 75d1c64aad0fdb74d9778cb2804a1934, type: 3}
+  - {fileID: 5947075794794265146, guid: df613752882ecc74fba87df165c7fe80, type: 3}
+  Edges:
+  - {fileID: 7819432598398212383, guid: 6b1a9374e140b314d93094f6af1d5a6f, type: 3}
+  - {fileID: 4131224127130452616, guid: 68259ce18ab1c7f48a43ea920a3e3254, type: 3}
+  - {fileID: 5863561693812882689, guid: ec0fa596cd0b1e5449013c403ee4be6b, type: 3}
+  - {fileID: 6988344368800974429, guid: 9b5b261d48f9af6418e71fad7cfab02c, type: 3}
+  - {fileID: 3784740389827378348, guid: c447b174f48f0f54ab57e61c320d72df, type: 3}
+  Centers:
+  - {fileID: 4660713421189731235, guid: 5eed7cb24c7602d4da9ee31d7b6c045d, type: 3}
+  map: {fileID: 591946081523228285, guid: b98c0dde6c93cbb4cb34b38fdbc12479, type: 3}
+  array_size: 3
+  position: []
+  part_size: 98
+  height: 0
+--- !u!114 &7109980789553796031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8746210035201541191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84674b3fed8697741ac9762c3489a0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  melee:
+  - {fileID: 735978953597131951, guid: 67bbbd96992e8b840a36d6c8bfcfa67b, type: 3}
+  ranged:
+  - {fileID: 3448223193388842023, guid: 98d52075000f63844a9e87db948fc099, type: 3}
+  tank:
+  - {fileID: 6919498359360050831, guid: 9a2a06664dd2a934397e2b8f6cc3f78a, type: 3}
+  cooldown: 30
+  starting_amount: 0

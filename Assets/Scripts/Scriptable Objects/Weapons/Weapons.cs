@@ -20,6 +20,7 @@ public class Weapons : Inventory_Items
     public float damage;
     public float attack_speed;
     public float cooldown;
+    public float knockback;
 
 
 
