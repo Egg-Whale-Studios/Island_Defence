@@ -6,8 +6,8 @@ using UnityEngine;
 public class Tool_Behaviour : MonoBehaviour
 {
     public Tools data;
-    public float damage;
-    public string target;
+    [NonSerialized] public float damage;
+    [NonSerialized] public string target;
     
     void Awake()
     {

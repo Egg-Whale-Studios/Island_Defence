@@ -147,7 +147,7 @@ MonoBehaviour:
   backing_up: 15
   closing_in: 5
   speed: 3
-  weapon: {fileID: 3028816113694862320}
+  weapon: {fileID: 1271517701596144847}
   attack_cooldown: 5
 --- !u!114 &6449004605607896496
 MonoBehaviour:
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 7701289350866487909}
   - component: {fileID: 6723771206340330944}
   - component: {fileID: 8839252152854163722}
-  - component: {fileID: 3028816113694862320}
+  - component: {fileID: 1271517701596144847}
   - component: {fileID: 5973882150125698153}
   m_Layer: 0
   m_Name: ShortSword
@@ -853,7 +853,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3028816113694862320
+--- !u!114 &1271517701596144847
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -862,11 +862,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 7037905141673300191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adbd3b76590bfe94196bdf08b1c12df3, type: 3}
+  m_Script: {fileID: 11500000, guid: d12d7c4fa04345f4fab0415716c8d1c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 663c3927726af25458205d380d310719, type: 2}
-  user: {fileID: 0}
 --- !u!65 &5973882150125698153
 BoxCollider:
   m_ObjectHideFlags: 0

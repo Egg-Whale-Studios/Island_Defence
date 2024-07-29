@@ -16,14 +16,17 @@ MonoBehaviour:
   name: Daggers
   icon: {fileID: 21300000, guid: 944c7c584fea36b438edd0b36c4dd97c, type: 3}
   prefab: {fileID: 3111599475211274378, guid: e882fc9e3b469da4da0cc666ff64c38c, type: 3}
+  world_object: {fileID: 0}
   type: Weapon
+  stackable: 0
   tier: 
-  target: 
   dual: 1
+  weapon_type: Melee
   handle_position: {x: 0, y: 0, z: 0}
   Walking: {fileID: 0}
   Attacking: {fileID: 0}
   animation_bool: attacking
   damage: 3
   attack_speed: 0
-  cooldown: 0
+  cooldown: 1
+  knockback: 0

@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 2334359461788045872}
   - component: {fileID: 1714345358571462037}
   - component: {fileID: 3471821543735896415}
-  - component: {fileID: 8709869898933545986}
   - component: {fileID: -5881224752023271194}
-  m_Layer: 10
+  m_Layer: 15
   m_Name: Daggerss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8709869898933545986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3111599475211274378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: adbd3b76590bfe94196bdf08b1c12df3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 123e5f1aa35eae34183e2c09380e984a, type: 2}
 --- !u!65 &-5881224752023271194
 BoxCollider:
   m_ObjectHideFlags: 0

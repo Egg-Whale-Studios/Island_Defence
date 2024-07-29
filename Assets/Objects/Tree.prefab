@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 4367206582951123673}
   - component: {fileID: 5271081145559025265}
   - component: {fileID: 4092479243665569698}
+  - component: {fileID: 6806751726114404728}
   m_Layer: 7
   m_Name: Tree
   m_TagString: Tree
@@ -336,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 0d67f746b04b7bc498eea404fc233ffb, type: 2}
+  loot_particles: {fileID: 8794542878003410467, guid: 8cb8058be768f5f44bdf3f89e9145137, type: 3}
 --- !u!208 &4092479243665569698
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -352,6 +354,27 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
+--- !u!95 &6806751726114404728
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3602913001532959756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: efa09bddcf3976c4fba8dd9f6f96e5eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5252950106550005870
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,8 +16,9 @@ MonoBehaviour:
   name: Barrier
   icon: {fileID: 21300000, guid: 6edf41823da4f074aa5bd207ba6ac215, type: 3}
   prefab: {fileID: 6546312604391709742, guid: 053d5d9aa1104bd41a75645325b91e4e, type: 3}
+  world_object: {fileID: 0}
   type: Build
-  stackable: 0
+  stackable: 1
   tier: 
   Item_Names: []
   Item_Values: 

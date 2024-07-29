@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bab72f644251243b475cb62112d7df, type: 3}
   m_Name: Stone
   m_EditorClassIdentifier: 
+  description: 
   name: Stone
   icon: {fileID: 21300000, guid: e7bb9fba83e53034d8093effc1be1d6e, type: 3}
-  type: loot
+  prefab: {fileID: 0}
+  world_object: {fileID: 0}
+  type: Material
+  stackable: 1
+  consumable: 0

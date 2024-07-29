@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9bab72f644251243b475cb62112d7df, type: 3}
   m_Name: Wood
   m_EditorClassIdentifier: 
+  description: 
   name: Wood
   icon: {fileID: 21300000, guid: d7d60ea86a0825a47aba93eef53d0807, type: 3}
-  type: loot
+  prefab: {fileID: 0}
+  world_object: {fileID: 0}
+  type: Material
+  stackable: 1
+  consumable: 0

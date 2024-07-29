@@ -16,7 +16,9 @@ MonoBehaviour:
   name: Axe
   icon: {fileID: 21300000, guid: 1783844575802cd4f910e344fa26ad8f, type: 3}
   prefab: {fileID: 3073939353750562185, guid: 84e78735d9428494da86fe464e766c53, type: 3}
+  world_object: {fileID: 5294583910410381925, guid: 4ef832dd9b7b9f846aca8de9920dfc03, type: 3}
   type: Tool
+  stackable: 0
   tier: 1
   target: Tree
   animation_bool: chopping

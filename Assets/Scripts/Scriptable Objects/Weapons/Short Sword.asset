@@ -16,13 +16,17 @@ MonoBehaviour:
   name: Sword
   icon: {fileID: 21300000, guid: a9e059ad469147e439f806c5411ad3dc, type: 3}
   prefab: {fileID: 3111599475211274378, guid: 8f2134b855a922245816b8027eb6f2e2, type: 3}
+  world_object: {fileID: 4922639570123343229, guid: 02c74f4405c917c4490804c79015b5ec, type: 3}
   type: Weapon
+  stackable: 0
   tier: 1
   dual: 0
+  weapon_type: Melee
   handle_position: {x: 0, y: 0.6, z: 0}
   Walking: {fileID: 0}
   Attacking: {fileID: 0}
   animation_bool: attacking
   damage: 5
   attack_speed: 0
-  cooldown: 0
+  cooldown: 1
+  knockback: 0

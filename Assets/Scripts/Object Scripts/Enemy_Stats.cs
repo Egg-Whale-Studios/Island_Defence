@@ -30,21 +30,20 @@ public class Enemy_Stats : MonoBehaviour
     void Update()
     {
         
-        
         img.fillAmount = current_health / max_health;
-        img = foreground.GetComponent<Image>();
         
     }
     
     
     
     #region *Health Tweak*
-    private void die()
+    private bool die()
     {
         if (current_health <= 0)
         {
-            Destroy(gameObject);
-        } 
+            return true;
+        }
+        else return false;
     }
     
     
@@ -53,15 +52,20 @@ public class Enemy_Stats : MonoBehaviour
         
         current_health -= amount;
         Debug.Log(current_health);
+        if (die())
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Vector3 knockbackDirection = (transform.position - weaponPosition).normalized;
+            body.isKinematic = false;
+            agent.ResetPath();
+            body.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
+            yield return new WaitForSeconds(0.5f);
+            if (body != null) body.isKinematic = true;
+        }
         
-        
-        Vector3 knockbackDirection = (transform.position - weaponPosition).normalized;
-        body.isKinematic = false;
-        agent.ResetPath();
-        body.AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
-        die();
-        yield return new WaitForSeconds(0.5f);
-        if (body != null) body.isKinematic = true;
         
         
         

@@ -18,6 +18,6 @@ MonoBehaviour:
   max_health: 9
   tier: 1
   the_object: {fileID: 3602913001532959756, guid: c9d9f1083f80e6246b4a0cd2fe46e71a, type: 3}
-  object_limit: 5
+  object_limit: 30
   cooldown: 5
   tag: TreeSpawner

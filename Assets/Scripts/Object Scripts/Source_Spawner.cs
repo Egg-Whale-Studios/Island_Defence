@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -20,6 +21,8 @@ public class Source_Spawner : MonoBehaviour
 
     private float[] x_range;
     private float[] y_range;
+    
+    public static event Action ChangingObj;
 
     private void Start()
     {
@@ -69,7 +72,7 @@ public class Source_Spawner : MonoBehaviour
             temp_pos = hit.point;
 
             Instantiate(Obj, temp_pos, Quaternion.identity);
-            source_count++;
+            increase_obj();
 
         }
         else
@@ -83,5 +86,12 @@ public class Source_Spawner : MonoBehaviour
     public void decrease_obj()
     {
         source_count -= 1;
+        ChangingObj?.Invoke();
+    }
+    
+    public void increase_obj()
+    {
+        source_count += 1;
+        ChangingObj?.Invoke();
     }
 }

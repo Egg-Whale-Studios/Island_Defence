@@ -1,6 +1,6 @@
 # Island Defense
 
-## Version: 0.2
+## Version: 0.3
 
 ### Project Description
 
@@ -11,13 +11,14 @@ Island Defense is a survival game where players can explore an island, gather re
 - **Spawning System**
   - Trees and rocks can be spawned in the game world.
 - **Enemy AI**
-  - A placeholder enemy for testing navmesh and combat mechanics.
+  - 3 different enemy types each with their own combat style.
 - **Player Mechanics**
   - Basic animations for player actions.
   - Mining and chopping mechanics.
   - Attack mechanics.
 - **Inventory System**
   - Manage collected resources and items.
+  - Added tabs for different item types.
 - **Build System**
   - Players can build structures and other items.
 - **Crafting System**

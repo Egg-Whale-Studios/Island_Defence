@@ -9,6 +9,7 @@ public class Inventory_Items : ScriptableObject
     public new string name;
     public Sprite icon;
     public GameObject prefab;
+    public GameObject world_object;
     public string type;
     public bool stackable;
 

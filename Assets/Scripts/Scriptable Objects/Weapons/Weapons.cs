@@ -10,6 +10,7 @@ public class Weapons : Inventory_Items
     [Header("Info")]
     public string tier;
     public bool dual;
+    public string weapon_type;
     public Vector3 handle_position;
     public Animation Walking;
     public Animation Attacking;

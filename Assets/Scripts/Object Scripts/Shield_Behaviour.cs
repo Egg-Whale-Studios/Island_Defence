@@ -1,14 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class Shield_Behaviour : MonoBehaviour
+public class Shield_Behaviour : Weapon_Behaviour
 {
     
-    public Weapons data;
-    private float damage;
-    [NonSerialized] public string target;
+    
     [NonSerialized] public bool on_cooldown;
     private Rigidbody body;
 
@@ -20,6 +19,7 @@ public class Shield_Behaviour : MonoBehaviour
     void Start()
     {
         damage = data.damage;
+        cooldown = data.cooldown;
         body = GetComponent<Rigidbody>();
     }
 
@@ -29,10 +29,10 @@ public class Shield_Behaviour : MonoBehaviour
     private IEnumerator OnTriggerEnter(Collider other)
     {
       
-        if (other.gameObject.CompareTag(target) && !on_cooldown)
+        if (target.Contains(other.tag) && !on_cooldown)
         {
-
-            if (target == "Enemy")
+            
+            if (target.Contains("Enemy"))
             {
                 on_cooldown = true;
                 Enemy_Stats enemy = other.gameObject.GetComponent<Enemy_Stats>();
@@ -40,15 +40,25 @@ public class Shield_Behaviour : MonoBehaviour
                 yield return new WaitForSeconds(1);
                 on_cooldown = false;
             }
-            else if (target == "Player")
+            else if (target.Contains("Player"))
             {
                 on_cooldown = true;
-                Player_Stats stats = other.gameObject.GetComponent<Player_Stats>();
-                stats.change_health(-damage);
-                StartCoroutine(stats.knockback(transform.position, 100,2));
+                if(other.CompareTag("Player"))
+                {
+                    
+                    Player_Stats stats = other.gameObject.GetComponent<Player_Stats>();
+                    stats.change_health(-damage);
+                    StartCoroutine(stats.knockback(transform.position, 100, 2));
+                }
+                else
+                {
+                    AllyStats ally = other.gameObject.GetComponent<AllyStats>();
+                    StartCoroutine(ally.take_damage(damage, transform.position, 200));
+                }
                 yield return new WaitForSeconds(1);
                 on_cooldown = false;
             }
+            
         }
     }
 }

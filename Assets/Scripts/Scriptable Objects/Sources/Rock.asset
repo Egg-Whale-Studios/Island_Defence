@@ -18,6 +18,6 @@ MonoBehaviour:
   max_health: 9
   tier: 1
   the_object: {fileID: 4702709048207252389, guid: 654da5104da739846ae4d6c7f28aaef8, type: 3}
-  object_limit: 5
+  object_limit: 30
   cooldown: 5
   tag: RockSpawner

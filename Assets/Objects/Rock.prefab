@@ -119,6 +119,7 @@ GameObject:
   - component: {fileID: -4187368200900073939}
   - component: {fileID: -2615955081599933755}
   - component: {fileID: -4531395462954515216}
+  - component: {fileID: 98251418939642579}
   m_Layer: 7
   m_Name: Rock
   m_TagString: Rock
@@ -205,6 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 6ffa179d660eb7649811f4724dd434e8, type: 2}
+  loot_particles: {fileID: 8794542878003410467, guid: 2ce5b731c3f5d9c49a29437781b9de1f, type: 3}
 --- !u!208 &-2615955081599933755
 NavMeshObstacle:
   m_ObjectHideFlags: 0
@@ -242,6 +244,27 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.188728, y: 3.5481627, z: 3.2857926}
   m_Center: {x: -0.30490983, y: 0.072796345, z: 0.3571087}
+--- !u!95 &98251418939642579
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4702709048207252389}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: efa09bddcf3976c4fba8dd9f6f96e5eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5089261104958446701
 GameObject:
   m_ObjectHideFlags: 0
